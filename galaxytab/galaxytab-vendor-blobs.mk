@@ -39,16 +39,22 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/galaxytab/proprietary/camera/libcamera_client.so:system/lib/libcamera_client.so \
     vendor/samsung/galaxytab/proprietary/camera/libcameraservice.so:system/lib/libcameraservice.so \
     vendor/samsung/galaxytab/proprietary/camera/libcamera.so:system/lib/libcamera.so \
-    vendor/samsung/galaxytab/proprietary/camera/libPanoraMax1.so:system/lib/libPanoraMax1.so
+    vendor/samsung/galaxytab/proprietary/camera/libPanoraMax1.so:system/lib/libPanoraMax1.so \
+    vendor/samsung/galaxytab/proprietary/camera/libseccameraadaptor.so:system/lib/libseccameraadaptor.so \
+    vendor/samsung/galaxytab/proprietary/camera/libseccamera.so:system/lib/libseccamera.so
 
 # GPS
 PRODUCT_COPY_FILES += \
-    vendor/samsung/galaxytab/proprietary/gps/gps.s5pc110.so:system/lib/hw/gps.s5pc110.so \
+    vendor/samsung/galaxytab/proprietary/gps/gps.s5pc110.so:system/vendor/lib/hw/gps.s5pc110.so \
     vendor/samsung/galaxytab/proprietary/gps/gpsd:system/vendor/bin/gpsd \
     vendor/samsung/galaxytab/proprietary/gps/gps.xml:system/vendor/etc/gps.xml \
     vendor/samsung/galaxytab/proprietary/gps/gps.conf:system/etc/gps.conf \
     vendor/samsung/galaxytab/proprietary/gps/geomagneticd:system/vendor/bin/geomagneticd \
     vendor/samsung/galaxytab/proprietary/gps/orientationd:system/vendor/bin/orientationd
+
+# LIGHTS
+PRODUCT_COPY_FILES += \
+    vendor/samsung/galaxytab/proprietary/lights/lights.s5pc110.so:system/lib/hw/lights.s5pc110.so
 
 # PVR
 PRODUCT_COPY_FILES += \
@@ -78,8 +84,9 @@ PRODUCT_COPY_FILES += \
 
 # SENSORS
 PRODUCT_COPY_FILES += \
-    vendor/samsung/galaxytab/proprietary/sensors/sensors.s5pc110.so:system/lib/hw/sensors.s5pc110.so \
-    vendor/samsung/galaxytab/proprietary/sensors/libsensor_yamaha_test.so:system/lib/hw/libsensor_yamaha_test.so
+    vendor/samsung/galaxytab/proprietary/sensors/sensors.s5pc110.so:system/vendor/lib/hw/sensors.s5pc110.so \
+    vendor/samsung/galaxytab/proprietary/sensors/libsensor_yamaha_test.so:system/vendor/lib/libsensor_yamaha_test.so \
+    vendor/samsung/galaxytab/proprietary/sensors/libsensorservice.so:system/vendor/lib/libsensor_yamaha_test.so
 
 # TOUCHSCREEN
 PRODUCT_COPY_FILES += \
@@ -113,29 +120,29 @@ PRODUCT_COPY_FILES += \
 
 # low power mode
 PRODUCT_COPY_FILES += \
-    vendor/samsung/vzwtab/proprietary/charging_mode:system/bin/charging_mode \
-    vendor/samsung/vzwtab/proprietary/playlpm:system/bin/playlpm \
-    vendor/samsung/vzwtab/proprietary/libQmageDecoder.so:system/lib/libQmageDecoder.so \
-    vendor/samsung/vzwtab/proprietary/battery_charging_10.qmg:system/media/battery_charging_10.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_100.qmg:system/media/battery_charging_100.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_15.qmg:system/media/battery_charging_15.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_20.qmg:system/media/battery_charging_20.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_25.qmg:system/media/battery_charging_25.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_30.qmg:system/media/battery_charging_30.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_35.qmg:system/media/battery_charging_35.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_40.qmg:system/media/battery_charging_40.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_45.qmg:system/media/battery_charging_45.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_5.qmg:system/media/battery_charging_5.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_50.qmg:system/media/battery_charging_50.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_55.qmg:system/media/battery_charging_55.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_60.qmg:system/media/battery_charging_60.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_65.qmg:system/media/battery_charging_65.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_70.qmg:system/media/battery_charging_70.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_75.qmg:system/media/battery_charging_75.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_80.qmg:system/media/battery_charging_80.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_85.qmg:system/media/battery_charging_85.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_90.qmg:system/media/battery_charging_90.qmg \
-    vendor/samsung/vzwtab/proprietary/battery_charging_95.qmg:system/media/battery_charging_95.qmg \
-    vendor/samsung/vzwtab/proprietary/chargingwarning_disconnected.qmg:system/media/chargingwarning_disconnected.qmg \
-    vendor/samsung/vzwtab/proprietary/chargingwarning_temp.qmg:system/media/chargingwarning_temp.qmg \
-    vendor/samsung/vzwtab/proprietary/usb_not_charging.qmg:system/media/usb_not_charging.qmg
+    vendor/samsung/galaxytab/proprietary/battery/charging_mode:system/bin/charging_mode \
+    vendor/samsung/galaxytab/proprietary/battery/playlpm:system/bin/playlpm \
+    vendor/samsung/galaxytab/proprietary/battery/libQmageDecoder.so:system/lib/libQmageDecoder.so \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_10.qmg:system/media/battery_charging_10.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_100.qmg:system/media/battery_charging_100.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_15.qmg:system/media/battery_charging_15.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_20.qmg:system/media/battery_charging_20.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_25.qmg:system/media/battery_charging_25.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_30.qmg:system/media/battery_charging_30.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_35.qmg:system/media/battery_charging_35.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_40.qmg:system/media/battery_charging_40.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_45.qmg:system/media/battery_charging_45.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_5.qmg:system/media/battery_charging_5.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_50.qmg:system/media/battery_charging_50.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_55.qmg:system/media/battery_charging_55.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_60.qmg:system/media/battery_charging_60.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_65.qmg:system/media/battery_charging_65.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_70.qmg:system/media/battery_charging_70.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_75.qmg:system/media/battery_charging_75.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_80.qmg:system/media/battery_charging_80.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_85.qmg:system/media/battery_charging_85.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_90.qmg:system/media/battery_charging_90.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/battery_charging_95.qmg:system/media/battery_charging_95.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/chargingwarning_disconnected.qmg:system/media/chargingwarning_disconnected.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/chargingwarning_temp.qmg:system/media/chargingwarning_temp.qmg \
+    vendor/samsung/galaxytab/proprietary/battery/usb_not_charging.qmg:system/media/usb_not_charging.qmg
