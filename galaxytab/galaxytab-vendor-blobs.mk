@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
 
 # BLUETOOTH
 PRODUCT_COPY_FILES += \
-    vendor/samsung/galaxytab/proprietary/bluetooth/BCM4329B1_002.002.023.0534.0590.hcd:system/bin/BCM4329B1_002.002.023.0534.0590.hcd
+    vendor/samsung/galaxytab/proprietary/bluetooth/BCM4329B1_002.002.023.0534.0571.hcd:system/bin/BCM4329B1_002.002.023.0534.0571.hcd
 
 # CAMERA
 PRODUCT_COPY_FILES += \
